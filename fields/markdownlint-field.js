@@ -3,7 +3,8 @@
 define(function(require, exports, module) {
     const $ = require("jquery");
     const Alpaca = $.alpaca;
-    const markdownlint = require("../lib/markdownlint-browser.js");
+    window.markdownIt = markdownIt = require("../lib/markdown-it/dist/markdown-it.js");
+    const markdownlint = require("../lib/markdownlint-browser-cloudcms.js");
 
     Alpaca.Fields.MarkdownField = Alpaca.Fields.TextAreaField.extend(
         /**
